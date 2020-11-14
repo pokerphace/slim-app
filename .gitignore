@@ -1,0 +1,9 @@
+# Env files
+*.env
+*.envrc
+
+# Vendor files
+/vendor
+
+# IDE files
+*.idea
