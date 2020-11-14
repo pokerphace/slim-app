@@ -1,8 +1,15 @@
 {
     "name": "pokerphace/phalcon-app",
     "config": {
+        "bin-dir": "bin/",
         "platform": {
             "php": "7.4.12"
         }
+    },
+    "require-dev": {
+        "behat/behat": "~2.5"
+    },
+    "scripts": {
+        "test": "bin/behat"
     }
 }
