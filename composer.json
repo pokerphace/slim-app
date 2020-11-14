@@ -1,2 +1,8 @@
 {
+    "name": "pokerphace/phalcon-app",
+    "config": {
+        "platform": {
+            "php": "7.4.12"
+        }
+    }
 }
