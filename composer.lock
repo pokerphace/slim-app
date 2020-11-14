@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "058a31034377fff71da0643abeb22e82",
+    "content-hash": "c2f17395de8af497654eab0172241c40",
     "packages": [],
     "packages-dev": [
         {
@@ -892,7 +892,7 @@
     "prefer-lowest": false,
     "platform": {
         "php": "7.4.12",
-        "ext-phalcon": ">=4.1.0"
+        "ext-phalcon": "4.1.0"
     },
     "platform-dev": [],
     "platform-overrides": {
