@@ -4,6 +4,10 @@
 
 # Vendor files
 /vendor
+/bin
 
 # IDE files
 *.idea
+
+#files
+composer.phar
