@@ -5,6 +5,7 @@
 # Vendor files
 /vendor
 /bin
+/data
 
 # IDE files
 *.idea
