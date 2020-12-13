@@ -1,1 +1,1 @@
-web: bin/heroku-php-nginx -C docker/web/pokerphace.conf public/
+web: bin/heroku-php-nginx -C docker/web/nginx/pokerphace.conf public/
