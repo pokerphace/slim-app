@@ -7,10 +7,14 @@
             "php": "8.0.0"
         }
     },
+    "repositories": [
+        { "type": "vcs", "url": "https://github.com/pokerphace/domain" }
+    ],
     "require": {
         "php": "8.0.0",
         "slim/slim": "4.7.1",
-        "slim/psr7": "1.3.0"
+        "slim/psr7": "1.3.0",
+        "pokerphace/domain": "dev-main"
     },
     "require-dev": {
         "behat/behat": "2.5.5"

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0758a547db311868a208881ae9da9b94",
+    "content-hash": "95ba2d3b27e97bd396c8017a19b6b5aa",
     "packages": [
         {
             "name": "fig/http-message-util",
@@ -111,6 +111,37 @@
                 "source": "https://github.com/nikic/FastRoute/tree/master"
             },
             "time": "2018-02-13T20:26:39+00:00"
+        },
+        {
+            "name": "pokerphace/domain",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pokerphace/domain.git",
+                "reference": "a6f91d52eaa891311640cd01e65922132157a670"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pokerphace/domain/zipball/a6f91d52eaa891311640cd01e65922132157a670",
+                "reference": "a6f91d52eaa891311640cd01e65922132157a670",
+                "shasum": ""
+            },
+            "require": {
+                "php": "8.0.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Pokerphace\\Domain\\": "src/"
+                }
+            },
+            "description": "A project to test concepts about software engineering - Domain",
+            "support": {
+                "source": "https://github.com/pokerphace/domain/tree/main",
+                "issues": "https://github.com/pokerphace/domain/issues"
+            },
+            "time": "2020-12-13T03:14:22+00:00"
         },
         {
             "name": "psr/container",
@@ -1591,7 +1622,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "pokerphace/domain": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
