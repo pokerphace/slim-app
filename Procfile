@@ -1,1 +1,1 @@
-web: $(composer config bin-dir)/heroku-php-apache2 public/
+web: bin/heroku-php-nginx -C docker/web/pokerphace.conf public/
