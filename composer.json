@@ -17,9 +17,20 @@
         "pokerphace/domain": "dev-main"
     },
     "require-dev": {
-        "behat/behat": "2.5.5"
+        "behat/behat": "3.8.1",
+        "phpunit/phpunit": "9.5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pokerphace\\AcceptanceTest\\Context\\": "test/acceptance/context/"
+        }
     },
     "scripts": {
-        "test": "bin/behat"
+        "test": [
+            "@acceptanceTest",
+            "@unitTest"
+        ],
+        "acceptanceTest": "bin/behat",
+        "unitTest": "phpunit --configuration config/phpunit.xml"
     }
 }

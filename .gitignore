@@ -12,3 +12,4 @@
 
 #files
 composer.phar
+config/.phpunit.result.cache

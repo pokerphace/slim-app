@@ -1,0 +1,9 @@
+default:
+  autoload:
+    '': 'test/acceptance/context'
+  suites:
+    default:
+      paths:
+        - 'test/acceptance/feature'
+      contexts:
+        - Pokerphace\AcceptanceTest\Context\Authentication\GenerateJwtTokenContext
