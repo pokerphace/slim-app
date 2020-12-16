@@ -17,7 +17,8 @@
         "slim/psr7": "1.3.0",
         "pokerphace/domain": "dev-main",
         "jerowork/slim-route-attribute-provider": "^0.3.0",
-        "symfony/dependency-injection": "5.2.0"
+        "symfony/dependency-injection": "5.2.0",
+        "ext-mbstring": "*"
     },
     "autoload": {
         "psr-4": {
