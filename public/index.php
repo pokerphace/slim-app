@@ -8,11 +8,15 @@ use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
-require __DIR__ . '/../vendor/autoload.php';
+define('PROJECT_ROOT', __DIR__ . '/..');
+
+require PROJECT_ROOT . '/vendor/autoload.php';
 
 $containerBuilder = new ContainerBuilder();
-$loader = new YamlFileLoader($containerBuilder, new FileLocator(__DIR__));
-$loader->load('../config/dependency-injection.yml');
+$loader = new YamlFileLoader($containerBuilder, new FileLocator(PROJECT_ROOT));
+$loader->load(
+    sprintf('%s/config/dependency-injection.yml', PROJECT_ROOT)
+);
 
 $app = AppFactory::createFromContainer($containerBuilder);
 
@@ -23,7 +27,7 @@ $routeConfigurator = new RouteAttributeConfigurator(
 );
 
 $routeConfigurator
-    ->addDirectory(sprintf('%s/../src/Module', __DIR__))
+    ->addDirectory(sprintf('%s/src/Module', PROJECT_ROOT))
     ->configure();
 
 $app->run();
