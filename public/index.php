@@ -1,25 +1,29 @@
 <?php
-use Psr\Http\Message\ResponseInterface as Response;
-use Psr\Http\Message\ServerRequestInterface as Request;
+ini_set('display_errors', 1);
+
+use Jerowork\RouteAttributeProvider\RouteAttributeConfigurator;
+use Jerowork\RouteAttributeProvider\Slim\SlimRouteAttributeProvider;
 use Slim\Factory\AppFactory;
-use Pokerphace\Domain\Number;
+use Symfony\Component\Config\FileLocator;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$app = AppFactory::create();
+$containerBuilder = new ContainerBuilder();
+$loader = new YamlFileLoader($containerBuilder, new FileLocator(__DIR__));
+$loader->load('../config/dependency-injection.yml');
 
-$app->get('/hello/{name}', function (Request $request, Response $response, array $args) {
-    $name = $args['name'];
-    $response->getBody()->write("Hello, $name");
-    return $response;
-});
+$app = AppFactory::createFromContainer($containerBuilder);
 
-$app->get('/', function (Request $request, Response $response) {
-    $number = new Number(1);
+$app->addErrorMiddleware(displayErrorDetails: true, logErrors: true, logErrorDetails: true);
 
-    $response->getBody()->write("ei: " . $number->getNumber());
+$routeConfigurator = new RouteAttributeConfigurator(
+    SlimRouteAttributeProvider::createFromApp($app)
+);
 
-    return $response;
-});
+$routeConfigurator
+    ->addDirectory(sprintf('%s/../src/Module', __DIR__))
+    ->configure();
 
 $app->run();

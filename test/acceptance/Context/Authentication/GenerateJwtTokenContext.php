@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
-namespace Pokerphace\AcceptanceTest\Context\Authentication;
+namespace AcceptanceTest\Context\Authentication;
 
 use Behat\Behat\Context\Context;
 use function PHPUnit\Framework\assertEquals;

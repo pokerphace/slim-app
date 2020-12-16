@@ -1,0 +1,8 @@
+services:
+  Pokerphace\Domain\Number:
+    class: Pokerphace\Domain\Number
+    arguments: [10.0003]
+  App\Module\Authentication\GenerateToken\Entrypoint\Http\Rest\Endpoint:
+    class: App\Module\Authentication\GenerateToken\Entrypoint\Http\Rest\Endpoint
+    arguments:
+      - '@Pokerphace\Domain\Number'

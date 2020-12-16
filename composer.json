@@ -1,6 +1,7 @@
 {
     "name": "pokerphace/phalcon-app",
     "description": "A project to test concepts about software engineering",
+    "version": "0.0.1",
     "config": {
         "bin-dir": "bin/",
         "platform": {
@@ -14,15 +15,23 @@
         "php": "8.0.0",
         "slim/slim": "4.7.1",
         "slim/psr7": "1.3.0",
-        "pokerphace/domain": "dev-main"
+        "pokerphace/domain": "dev-main",
+        "jerowork/slim-route-attribute-provider": "^0.3.0",
+        "symfony/dependency-injection": "5.2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
     },
     "require-dev": {
         "behat/behat": "3.8.1",
         "phpunit/phpunit": "9.5.0"
     },
-    "autoload": {
+    "autoload-dev": {
         "psr-4": {
-            "Pokerphace\\AcceptanceTest\\Context\\": "test/acceptance/context/"
+            "AcceptanceTest\\": "test/acceptance/",
+            "UnitTest\\": "test/unit/"
         }
     },
     "scripts": {
@@ -30,7 +39,7 @@
             "@acceptanceTest",
             "@unitTest"
         ],
-        "acceptanceTest": "bin/behat",
-        "unitTest": "phpunit --configuration config/phpunit.xml"
+        "acceptanceTest": "bin/behat --config config/acceptance-test.yml",
+        "unitTest": "bin/phpunit --configuration config/unit-test.xml"
     }
 }

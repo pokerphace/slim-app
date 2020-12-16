@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
-namespace Pokerphace\AcceptanceTest\Context;
+namespace App\AcceptanceTest\Context;
 
 use Behat\Behat\Tester\Exception\PendingException;
 use Behat\Behat\Context\Context;

@@ -1,0 +1,9 @@
+default:
+  autoload:
+    '': 'test/acceptance/Context'
+  suites:
+    default:
+      paths:
+        - 'test/acceptance/Feature'
+      contexts:
+        - AcceptanceTest\Context\Authentication\GenerateJwtTokenContext
