@@ -13,10 +13,6 @@ define('PROJECT_ROOT', __DIR__ . '/..');
 require PROJECT_ROOT . '/vendor/autoload.php';
 
 $containerBuilder = new ContainerBuilder();
-$loader = new YamlFileLoader($containerBuilder, new FileLocator(__DIR__));
-$loader->load(
-    sprintf('%s/config/dependency-injection.yml', PROJECT_ROOT)
-);
 
 $app = AppFactory::createFromContainer($containerBuilder);
 
