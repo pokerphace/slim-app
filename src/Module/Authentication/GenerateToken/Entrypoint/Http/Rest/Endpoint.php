@@ -19,7 +19,7 @@ final class Endpoint
     #[Route('/v1/auth/generate-token', method: RequestMethod::GET)]
     public function generateToken(Request $request, Response $response): Response
     {
-        $response->getBody()->write('toma' . $this->number);
+        $response->getBody()->write('Just a test calling a class from domain as a dependency' . $this->number);
 
         return $response;
     }
