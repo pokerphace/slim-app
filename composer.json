@@ -40,7 +40,7 @@
             "@acceptanceTest",
             "@unitTest"
         ],
-        "acceptanceTest": "bin/behat --config config/acceptance-test.yml",
-        "unitTest": "bin/phpunit --configuration config/unit-test.xml"
+        "acceptanceTest": "bin/behat --config config/acceptance-test.yml --format junit --out test/reports",
+        "unitTest": "bin/phpunit --configuration config/unit-test.xml --log-junit test/reports/unitReport.xml"
     }
 }

@@ -5,10 +5,12 @@
 # Vendor files
 /vendor
 /bin
-/data
 
 # IDE files
 *.idea
+
+#Test Files
+test/reports*
 
 #files
 composer.phar
