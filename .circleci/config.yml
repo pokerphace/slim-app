@@ -4,7 +4,7 @@
 #
 version: 2
 jobs:
-  test:
+  build:
     docker:
       # Specify the version you desire here
       - image: circleci/php:8.0.0
@@ -30,7 +30,7 @@ jobs:
       - store_test_results:
           path: test/reports
   deploy:
-    machine:
-      - image: ubuntu-2004:202010-01
+    requires:
+      - build
     steps:
       - run: ssh -o "StrictHostKeyChecking no" 188.166.119.9 "./deploy.sh"
