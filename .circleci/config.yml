@@ -36,3 +36,10 @@ jobs:
       - build
     steps:
       - run: ssh -o "StrictHostKeyChecking no" 188.166.119.9 "./deploy.sh"
+
+workflows:
+  version: 2
+  test_and_deploy:
+    jobs:
+      - build
+      - deploy
