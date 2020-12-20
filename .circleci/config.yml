@@ -30,5 +30,7 @@ jobs:
       - store_test_results:
           path: test/reports
   deploy:
+    machine:
+      - image: ubuntu-2004:202010-01
     steps:
       - run: ssh -o "StrictHostKeyChecking no" 188.166.119.9 "./deploy.sh"
