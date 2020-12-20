@@ -8,7 +8,7 @@ class Test extends TestCase
 {
     public function testTest(): void
     {
-        self::assertEquals(1, (new Number(1))->getNumber());
+        self::assertEquals(2, (new Number(1))->getNumber());
     }
 
     public function testTest2(): void

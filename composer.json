@@ -40,7 +40,7 @@
             "@acceptanceTest",
             "@unitTest"
         ],
-        "acceptanceTest": "bin/behat --config config/acceptance-test.yml",
+        "acceptanceTest": "bin/behat --config config/acceptance-test.yml -f pretty -o std -f junit --out test/reports",
         "unitTest": "bin/phpunit --configuration config/unit-test.xml --log-junit test/reports/unitReport.xml"
     }
 }
