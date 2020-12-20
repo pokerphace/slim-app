@@ -50,6 +50,5 @@ jobs:
       # run tests with phpunit or codecept
       #- run: ./vendor/bin/phpunit
       - run: composer test
-      - run: ssh -o "StrictHostKeyChecking no" root@188.166.119.9 "rm -rf /app && mkdir /app"
       - store_test_results:
           path: test/reports
