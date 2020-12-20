@@ -1,1 +1,1 @@
-# pokerphace-phalcon-app
+# Pokerphace Slim 4 app
