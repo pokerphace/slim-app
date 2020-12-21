@@ -1,9 +1,12 @@
 default:
-  autoload:
-    '': 'test/acceptance/Context'
   suites:
-    default:
+    authentication:
       paths:
-        - 'test/acceptance/Feature'
+        - 'test/acceptance/Feature/Authentication'
       contexts:
         - AcceptanceTest\Context\Authentication\GenerateJwtTokenContext
+    technical_information:
+      paths:
+        - 'test/acceptance/Feature/TechnicalInformation'
+      contexts:
+        - AcceptanceTest\Context\TechnicalInformation\FetchContext
