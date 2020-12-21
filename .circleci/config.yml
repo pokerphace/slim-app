@@ -35,7 +35,8 @@ jobs:
     requires:
       - build
     steps:
-      - run: ssh -o "StrictHostKeyChecking no" 188.166.119.9 "./deploy.sh"
+      - checkout
+      - run: cat paas/circleci/deploy.sh | ssh -o "StrictHostKeyChecking no" 188.166.119.9
 
 workflows:
   version: 2
