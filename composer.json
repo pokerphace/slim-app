@@ -1,5 +1,5 @@
 {
-    "name": "pokerphace/phalcon-app",
+    "name": "pokerphace/slim-app",
     "description": "A project to test concepts about software engineering",
     "version": "0.0.1",
     "config": {
@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "Pokerphace\\App\\": "src/"
         }
     },
     "require-dev": {

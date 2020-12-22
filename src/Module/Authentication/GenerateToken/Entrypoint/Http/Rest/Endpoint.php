@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
-namespace App\Module\Authentication\GenerateToken\Entrypoint\Http\Rest;
+namespace Pokerphace\App\Module\Authentication\GenerateToken\Entrypoint\Http\Rest;
 
 use Jerowork\RouteAttributeProvider\Api\RequestMethod;
 use Jerowork\RouteAttributeProvider\Api\Route;
