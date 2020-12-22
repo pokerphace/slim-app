@@ -10,7 +10,7 @@
 *.idea
 
 # Test Files
-test/reports*
+test/reports/*
 
 # Excluded files
 composer.phar
